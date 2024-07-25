@@ -7,6 +7,7 @@ Consta de 2 pantallas, una donde se muestra la lista de pokemon y se pueda busca
 
 ## Pantalla de Busqueda
 
-![Pantalla busqueda de Pokemon](/Assets.xcassets/Image 1.imageset/Image.pngg)
+![Pantalla busqueda de Pokemon](/Assets.xcassets/Image 1.imageset/Image.png)
+
 
 
