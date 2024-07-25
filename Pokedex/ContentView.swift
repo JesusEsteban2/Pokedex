@@ -8,17 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        PokemonListView()
+    }
+}
+    
+
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
 
-#Preview {
-    ContentView()
-}
+// Para listar nombres de pokemon
+// List(viewModel.listPokemon,id: \.id) {pokemon in
+//    Text(pokemon.name)
+// }
+
