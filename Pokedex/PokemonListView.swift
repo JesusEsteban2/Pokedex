@@ -49,7 +49,8 @@ struct PokemonListView:View {
             .searchable(text: $pokemonToSearch,prompt: "Search Pokemon")
             .onChange(of: pokemonToSearch)
             {
-               withAnimation {
+                withAnimation(.bouncy) {
+                  
                     viewModel.filterPokemon(name:pokemonToSearch)
                }
             }
