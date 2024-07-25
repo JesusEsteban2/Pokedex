@@ -7,5 +7,5 @@ Consta de 2 pantallas, una donde se muestra la lista de pokemon y se pueda busca
 
 ## Pantalla de Busqueda
 
-![Pantalla busqueda de Pokemon](/assets/images/Image.png)
+![Pantalla busqueda de Pokemon](/assets/Image 1/Image.png)
 
