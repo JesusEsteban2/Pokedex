@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PokemonListView:View {
     
-    @StateObject var viewModel=PokemonViewModel()
+    @StateObject private var viewModel=PokemonViewModel()
+    @State private var pokemonToSearch:String=""
     
     private let numberOfColumns=[
         GridItem(.flexible()),
@@ -44,7 +45,15 @@ struct PokemonListView:View {
                         }
                     }.padding(1)
                 }
-            }.navigationBarTitle("Pokedex",displayMode: .inline)
+            }
+            .searchable(text: $pokemonToSearch,prompt: "Search Pokemon")
+            .onChange(of: pokemonToSearch)
+            {
+               withAnimation {
+                    viewModel.filterPokemon(name:pokemonToSearch)
+               }
+            }
+            .navigationBarTitle("Pokedex",displayMode: .inline)
         }
     }
 }

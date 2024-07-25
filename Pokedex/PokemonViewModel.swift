@@ -30,6 +30,15 @@ class PokemonViewModel:ObservableObject {
         }
     }
     
+    func filterPokemon(name:String) {
+        if name.isEmpty {
+            filteredPokemon=listPokemon
+        } else {
+            filteredPokemon=listPokemon.filter({pokemon in
+                pokemon.name.lowercased().contains(name.lowercased())
+            })
+        }
+    }
     func getColorByType (type:String) ->Color {
         switch type {
             case "poison": return .purple
